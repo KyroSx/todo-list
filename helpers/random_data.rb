@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# generate fake data
 module RandomData
   def self.complete_name
     FFaker::Name.name
