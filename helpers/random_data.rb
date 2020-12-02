@@ -8,6 +8,6 @@ module RandomData
   end
 
   def self.boolean
-    FFaker::Boolean.random
+    true
   end
 end
