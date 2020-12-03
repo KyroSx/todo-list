@@ -14,4 +14,14 @@ RSpec.describe TodoController, type: :request do
       expect(json['title']).to eq todo_params['title']
     end
   end
+
+  describe 'GET /todos' do
+    let(:call) { get '/todo' }
+    let!(:todos) { FactoryBot.create_list(:todo, 10) }
+
+    it 'should return the correct todo list' do
+      call
+      expect(json.size).to eq todos.length
+    end
+  end
 end

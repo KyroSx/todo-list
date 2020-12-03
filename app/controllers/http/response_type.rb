@@ -1,6 +1,6 @@
 module ResponseType
-  def success(data)
-    response = { data: data, message: 'success' }
+  def success(data, message = 'Success')
+    response = { message: message, data: data }
     render json: response, status: 200
   end
 
