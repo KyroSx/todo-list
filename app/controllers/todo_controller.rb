@@ -1,4 +1,8 @@
 class TodoController < ApplicationController
+  def index
+    success Todo.all
+  end
+
   def create
     @todo = Todo.new todo_params
 
@@ -6,6 +10,8 @@ class TodoController < ApplicationController
 
     bad_request @todo.errors
   end
+
+  private
 
   def todo_params
     params.permit(:title, :details, :completed)
