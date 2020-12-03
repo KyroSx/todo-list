@@ -1,6 +1,6 @@
 class TodoController < ApplicationController
   def index
-    success Todo.all
+    success Todo.all, 'Todos Found'
   end
 
   def create
